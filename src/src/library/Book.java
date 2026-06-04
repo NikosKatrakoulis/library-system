@@ -7,7 +7,7 @@ public class Book {
     private String author;
     private boolean available;
 
-    public Book(String isbn, String title, String author, boolean available) {
+    public Book(String isbn, String title, String author) {
         setIsbn(isbn);
         setTitle(title);
         setAuthor(author);
@@ -57,9 +57,11 @@ public class Book {
 
     @Override
     public String toString() {
-        return  "ISBN:           " + getIsbn() +
-                "\nTitle:        " + getTitle() +
-                "\nAuthor:       " + getAuthor() +
-                "\nAvailability: " + (isAvailable() ? "AVAILABLE" : "NOT AVAILABLE");
+        return  String.format(
+                "ISBN: [%-10s]\nTitle: %-10s\nAuthor: %-10s\nStatus: %s",
+                getIsbn(), getTitle(), getAuthor(),
+                isAvailable()? "AVAILABLE": "NOT AVAILABLE",
+                "───────────────────"
+        );
     }
 }
