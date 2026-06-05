@@ -58,10 +58,10 @@ public class Book {
     @Override
     public String toString() {
         return  String.format(
-                "ISBN: [%-10s]\nTitle: %-10s\nAuthor: %-10s\nStatus: %s",
+                "ISBN: [%-10s]\nTitle: %-10s\nAuthor: %-10s\nStatus: %s\n%s",
                 getIsbn(), getTitle(), getAuthor(),
                 isAvailable()? "AVAILABLE": "NOT AVAILABLE",
-                "───────────────────"
+                "─".repeat(25)
         );
     }
 }

@@ -30,7 +30,7 @@ public class Main {
                             String isbn = scanner.nextLine();
                             System.out.print("Enter the title: ");
                             String title = scanner.nextLine();
-                            System.out.print("Enter the author:");
+                            System.out.print("Enter the author: ");
                             String author = scanner.nextLine();
                             System.out.println();
                             Book book = new Book(isbn, title, author);
